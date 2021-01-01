@@ -1,19 +1,19 @@
 {
-  "name": "smaregi",
+  "name": "smaregiapi",
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "npx babel-node tests/test.js",
-    "test2": "npx babel-node tests/test2.js"
+    "build": "npx babel src -d lib"
   },
   "author": "Isamu Arimoto",
   "license": "MIT",
   "devDependencies": {
+    "@babel/cli": "^7.12.10",
     "@babel/core": "^7.12.10",
     "@babel/node": "^7.12.10",
-    "@babel/preset-env": "^7.12.11",
-    "babel-cli": "^6.26.0"
+    "@babel/preset-env": "^7.12.11"
   },
   "dependencies": {
     "node-fetch": "^2.6.1"

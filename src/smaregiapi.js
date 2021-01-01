@@ -4,7 +4,7 @@ import * as apiUtils from "./apiUtils";
 class SmaregiApi {
   constructor(config) {
     this.stacks = [];
-    this.scopes = [];
+    this.scopes = config.scopes;
     this.access_token = null;
     this.contractId = config.contractId;
     this.clientId = config.clientId;
@@ -19,9 +19,7 @@ class SmaregiApi {
   stackParam(params) {
     this.stacks = this.stacks.concat(params)
   }
-  setScopes(scopes) {
-    this.scopes = scopes;
-  }
+
   // api base
   coupons() {
     this.initApi("coupons");

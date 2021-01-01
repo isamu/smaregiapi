@@ -11,7 +11,7 @@ npm install https://github.com/isamu/smaregiapi.git
 
 # Usage
 
-```
+```node
 import SmaregiApi from "smaregiapi";
 
 const main = async () => {
@@ -41,7 +41,7 @@ const main = async () => {
   };
   await storesApi.id(1).update(data);
 
-  / Get products lists
+  // Get products lists
   const productsApi = api.products();
   const productList = await productsApi.list();
   

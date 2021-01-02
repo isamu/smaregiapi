@@ -8,7 +8,11 @@ on:
     branches: [ master ]
   pull_request:
     branches: [ master ]
-
+env:
+  SmaregiContractId: ${{secrets.SMAREGICONTRACTID}}
+  SmaregiClientId: ${{secrets.SMAREGICLIENTID}}
+  SmaregiClientSecret: ${{secrets.SMAREGICLIENTSECRET}}
+  
 jobs:
   build:
     runs-on: ubuntu-latest

@@ -57,15 +57,27 @@ test('product api test', async () => {
   const newCategory = await categoriesApi.create({categoryName});
   expect(newCategory.categoryName).toBe(categoryName);
   const categoryId = newCategory.categoryId;
-  console.log(categoryId);
-  
+
   const productsApi = api.products();
+
+  const productName = "123 product";
+  const price = 100;
+  
+  const newproduct = await productsApi.create({
+    categoryId,
+    productName,
+    price,
+  });
+    
   const productList = await productsApi.list();
   expect(productList).toBeInstanceOf(Array)
 
 
-  
   // delete data
+  for (let i = 0; i < productList.length; i = i + 1) {
+    await api.products().id(productList[i].productId).delete();
+  }
+  
   const categoryList2 = await categoriesApi.list();
 
   for (let i = 0; i < categoryList2.length; i = i + 1) {

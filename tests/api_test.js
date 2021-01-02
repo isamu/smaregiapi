@@ -21,6 +21,8 @@ test('api test', async () => {
   const storeList = await storesApi.list();
   expect(storeList).toBeInstanceOf(Array)
   
-  // console.log(storeList);
+  const productsApi = api.products();
+  const productList = await productsApi.list();
+  expect(productList).toBeInstanceOf(Array)
   
 });

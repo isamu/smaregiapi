@@ -34,7 +34,7 @@ class SmaregiApi {
     return this;
   }
   categories() {
-    this.initapi("categories");
+    this.initApi("categories");
     return this;
   }
   // coupons
@@ -55,14 +55,20 @@ class SmaregiApi {
     const json = await apiUtils.get_func(this.contractId, path, this.access_token, {});
     return json;
   }
-  async create() {
+  async create(data) {
+    const path =  this.stacks.join("/")
+    const json = await apiUtils.post_func(this.contractId, path, this.access_token, data);
+    return json
   }
   async update(data) {
     const path =  this.stacks.join("/")
     const json = await apiUtils.patch_func(this.contractId, path, this.access_token, data);
     return json
   }
-  delete() {
+  async delete(data = {}) {
+    const path =  this.stacks.join("/")
+    const json = await apiUtils.delete_func(this.contractId, path, this.access_token, data);
+    return json
   }
   async auth() {
     const body = await apiUtils.authentication(this.clientId, this.clientSecret, this.contractId, this.scopes);

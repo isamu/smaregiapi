@@ -47,13 +47,19 @@ export const authentication = async (clientId, clientSecret, contractId, scopes)
 const actual_call = async (requst_url, options) => {
   const res = await fetch(requst_url, options);
   if (res.status === 200) {
-    return await res.json();
+    try {
+      return await res.json();
+    } catch (e) {
+      console.log(e);
+      return {};
+    }
   }
-  const response = await res.json();
+  const resres = await res.text();
+  // const response = await res.json();
   return {
     result: false,
     status: res.status,
-    payload: response,
+//    payload: response,
   };
 }
 
@@ -83,7 +89,15 @@ export const get_func = async (contractId, path, access_token, data) => {
   return await api_call(contractId, path, access_token, "GET", data);
 }
 
+export const post_func = async (contractId, path, access_token, data) => {
+  return await api_call(contractId, path, access_token, "POST", data);
+}
+
 export const patch_func = async (contractId, path, access_token, data) => {
   return await api_call(contractId, path, access_token, "PATCH", data);
+}
+
+export const delete_func = async (contractId, path, access_token, data) => {
+  return await api_call(contractId, path, access_token, "DELETE", data);
 }
 

@@ -1,3 +1,3 @@
-import SmaregiApi from "./SmaregiApi";
+import SmaregiApi from "./smaregiapi";
 
 module.exports = SmaregiApi;

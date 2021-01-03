@@ -1,4 +1,6 @@
 
+[![npm version](https://badge.fury.io/js/smaregiapi.svg)](https://badge.fury.io/js/smaregiapi)
+
 # Smaregi API
 
 Api tool for https://smaregi.jp/ 

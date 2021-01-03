@@ -8,7 +8,7 @@ Api tool for https://smaregi.jp/
 # Install
 
 ```
-npm install https://github.com/isamu/smaregiapi.git
+npm install smaregiapi
 ```
 
 # Usage

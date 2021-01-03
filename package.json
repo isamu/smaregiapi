@@ -8,6 +8,11 @@
     "build": "npx babel src -d lib"
   },
   "author": "Isamu Arimoto",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isamu/smaregiapi.git"
+  },
+  "homepage": "https://github.com/isamu/smaregiapi",
   "license": "MIT",
   "devDependencies": {
     "@babel/cli": "^7.12.10",

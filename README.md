@@ -44,5 +44,8 @@ const main = async () => {
 
   // Get products lists
   const productList = await api.products().productsApi.list();
-  
+};
+
+main();
+
 ```

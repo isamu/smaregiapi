@@ -1,5 +1,5 @@
 
-[![npm version](https://badge.fury.io/js/smaregiapi.svg)](https://badge.fury.io/js/smaregiapi)
+[![npm version](https://badge.fury.io/js/smaregiapi.svg)](https://badge.fury.io/js/smaregiapi)  ![Node.js CI](https://github.com/isamu/smaregiapi/workflows/Node.js%20CI/badge.svg)
 
 # Smaregi API
 

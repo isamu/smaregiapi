@@ -32,17 +32,15 @@ const main = async () => {
   await api.auth();
 
   // Get stores lists
-  const storesApi = api.stores();
-  const storeList = await storesApi.list();
+  const storeList = await api.stores().storesApi.list();
 
   // Update store data
   const data = {
     storeName: "npm api module test"
   };
-  await storesApi.id(1).update(data);
+  await api.stores().id(1).update(data);
 
   // Get products lists
-  const productsApi = api.products();
-  const productList = await productsApi.list();
+  const productList = await api.products().productsApi.list();
   
 ```

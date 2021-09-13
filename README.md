@@ -3,7 +3,7 @@
 
 # Smaregi API
 
-Api tool for https://smaregi.jp/ 
+Api tool for https://smaregi.jp/
 
 # Install
 
@@ -25,16 +25,16 @@ const main = async () => {
     scopes: [
       "pos.stock:read", "pos.stock:write",
       "pos.stores:read", "pos.stores:write",
-      "pos.customers:read", "pos.customers:write", 
+      "pos.customers:read", "pos.customers:write",
       "pos.products:read", "pos.products:write"
     ]
   };
-  
+
   const api = new SmaregiApi(config);
   await api.auth();
 
   // Get stores lists
-  const storeList = await api.stores().storesApi.list();
+  const storeList = await api.stores().list();
 
   // Update store data
   const data = {
@@ -43,7 +43,7 @@ const main = async () => {
   await api.stores().id(1).update(data);
 
   // Get products lists
-  const productList = await api.products().productsApi.list();
+  const productList = await api.products().list();
 };
 
 main();
